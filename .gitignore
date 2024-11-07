@@ -1,0 +1,26 @@
+# Ignorar archivos compilados
+**/*.pyc
+**/__pycache__/
+
+# Ignorar entornos virtuales
+**/env/
+**/venv/
+
+# Ignorar variales locales
+**/*.env
+
+
+# Ignorar archivos de log
+**/*.log
+**/logs/
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de Node.js
+**/node_modules/
+
+# Ignorar archivos de configuración
+**/config/*.yaml
+**/config/*.json
