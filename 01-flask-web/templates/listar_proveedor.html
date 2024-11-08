@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Listado de proveedores</h2>
+<!-- TODO: Se debe generar un listado de proveedores recuperado desde Los proveedores creados en la ruta de proveedores -->
+
+{% if proveedores %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Primer Nombre</th>
+            <th>Segundo Nombre</th>
+            <th>Primer Apellido</th>
+            <th>Segundo Apellido</th>
+            <th>Tipo de Persona</th>
+            <th>Número de Documento</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for proveedor in proveedores %}
+        <tr>
+            <td>{{ proveedor.primer_nombre }}</td>
+            <td>{{ proveedor.segundo_nombre }}</td>
+            <td>{{ proveedor.primer_apellido }}</td>
+            <td>{{ proveedor.segundo_apellido }}</td>
+            <td>{{ proveedor.tipo_persona }}</td>
+            <td>{{ proveedor.num_documento }}</td>
+            <td>{{ proveedor.email }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No hay proveedores registrados.</p>
+{% endif %}
+
+
+{% endblock %}

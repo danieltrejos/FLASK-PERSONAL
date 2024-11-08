@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Proveedores</h2>
+<p>Formulario de registro de proveedores</p>
+
+<!-- TODO: Formulario de registro primero basico con la clase form, luego cambiar este por el modulo Flask-WTF y luego hacerlo mendiante blueprints -->
+
+<form action="/proveedor" method="POST">
+
+    <div class="row">
+
+        <div class="col-md-3 form-floating mb-3">
+            <input type="text" class="form-control" name="primer_nombre" id="formFloating_primer_nombre"
+                placeholder="Ingresa el primer nombre">
+            <label for="formFloating_primer_nombre" class="mx-3">Primer nombre</label>
+        </div>
+        <div class="col-md-3 form-floating mb-3">
+            <input type="text" class="form-control" name="segundo_nombre" id="formFloating_segundo_nombre"
+                placeholder="Ingresa el segundo nombre">
+            <label for="formFloating_segundo_nombre" class="mx-3">Segundo nombre</label>
+        </div>
+        <div class="col-md-3 form-floating mb-3">
+            <input type="text" class="form-control" name="primer_apellido" id="formFloating_primer_apellido"
+                placeholder="Ingresa el primer_apellido">
+            <label for="formFloating_primer_apellido" class="mx-3">Primer Apellido</label>
+        </div>
+        <div class="col-md-3 form-floating mb-3">
+            <input type="text" class="form-control" name="segundo_apellido" id="formFloating_segundo_apellido"
+                placeholder="Ingresa el primer apellido">
+            <label for="formFloating_segundo_apellido" class="mx-3">Segundo Apellido</label>
+        </div>
+
+        <div class="col-md-4 form-floating mb-3">
+            <select name="tipo_persona" class="form-select" id="formFloating_tipo_persona">
+                <option value=""></option>
+                <option value="natural">1. Natural</option>
+                <option value="Juridica">2. Juridica</option>
+            </select>
+            <label for="formFloating_tipo_persona" class="mx-3">Tipo de persona</label>
+        </div>
+        <div class="col-md-4 form-floating mb-3">
+            <input type="number" name="num_documento" id="formFloating_num_documento" class="form-control"
+                placeholder="Ingresa el número de documento">
+            <label for="formFloating_num_documento" class="mx-3">Número de documento</label>
+        </div>
+        <div class="col-md-4 form-floating mb-3">
+            <input type="email" name="email" id="formFloating_email" class="form-control"
+                placeholder="Ingresa el email">
+            <label for="formFloating_email" class="mx-3">Email</label>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <input type="submit" class="btn btn-primary" value="Enviar datos">
+    </div>
+
+</form>
+
+{% endblock %}
